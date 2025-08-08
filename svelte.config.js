@@ -7,8 +7,8 @@ import mdsvexConfig from './mdsvex.config.js';
 const getAdapter = () => {
 	console.log('📄 使用 Static 适配器 (GitHub Pages)');
 	return staticAdapter({
-		pages: 'build',
-		assets: 'build',
+		pages: 'docs',
+		assets: 'docs',
 		fallback: 'index.html',
 		precompress: false,
 		strict: false
