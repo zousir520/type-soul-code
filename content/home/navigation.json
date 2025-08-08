@@ -1,0 +1,88 @@
+{
+  "logo": {
+    "text": {
+      "en": "tenniszero.org",
+      "zh": "tenniszero.org"
+    },
+    "url": "/"
+  },
+  "menuItems": [
+    {
+      "id": "features",
+      "label": {
+        "en": "Features",
+        "zh": "功能特色"
+      },
+      "href": "#features",
+      "type": "anchor"
+    },
+    {
+      "id": "pricing",
+      "label": {
+        "en": "Pricing",
+        "zh": "定价"
+      },
+      "href": "#pricing",
+      "type": "anchor"
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "FAQ",
+        "zh": "常见问题"
+      },
+      "href": "#faq",
+      "type": "anchor"
+    },
+    {
+      "id": "blog",
+      "label": {
+        "en": "Blog",
+        "zh": "博客"
+      },
+      "href": "/blog",
+      "type": "page"
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "About",
+        "zh": "关于我们"
+      },
+      "href": "/about",
+      "type": "page"
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Contact",
+        "zh": "联系我们"
+      },
+      "href": "/contact",
+      "type": "page"
+    }
+  ],
+  "ctaButton": {
+    "text": {
+      "en": "Get Started",
+      "zh": "开始使用"
+    },
+    "href": "#pricing",
+    "style": "primary"
+  },
+  "languageSwitch": {
+    "enabled": true,
+    "languages": [
+      {
+        "code": "en",
+        "label": "English",
+        "flag": "🇺🇸"
+      },
+      {
+        "code": "zh",
+        "label": "中文",
+        "flag": "🇨🇳"
+      }
+    ]
+  }
+}

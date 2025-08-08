@@ -1,0 +1,180 @@
+{
+  "title": {
+    "en": "Frequently Asked Questions",
+    "zh": "常见问题"
+  },
+  "subtitle": {
+    "en": "Everything you need to know about tenniszero.org",
+    "zh": "关于 tenniszero.org 您需要了解的一切"
+  },
+  "categories": [
+    {
+      "id": "general",
+      "name": {
+        "en": "General",
+        "zh": "常规问题"
+      },
+      "questions": [
+        {
+          "id": "what-is-vibby",
+          "question": {
+            "en": "What is tenniszero.org?",
+            "zh": "什么是 tenniszero.org？"
+          },
+          "answer": {
+            "en": "tenniszero.org is a comprehensive AI-powered startup boilerplate platform designed for non-programmers. It provides complete templates, tutorials, and tools to help you launch your SaaS product quickly without extensive coding knowledge.",
+            "zh": "tenniszero.org 是一个为非程序员设计的综合性 AI 驱动的创业模板平台。它提供完整的模板、教程和工具，帮助您在没有大量编程知识的情况下快速启动您的 SaaS 产品。"
+          }
+        },
+        {
+          "id": "who-is-it-for",
+          "question": {
+            "en": "Who is tenniszero.org for?",
+            "zh": "tenniszero.org 适合谁使用？"
+          },
+          "answer": {
+            "en": "tenniszero.org is perfect for entrepreneurs, startup founders, product managers, and anyone who wants to build and launch a SaaS product without deep technical expertise. Whether you're a complete beginner or have some technical background, our platform makes product development accessible.",
+            "zh": "tenniszero.org 非常适合企业家、创业创始人、产品经理以及任何想要在没有深厚技术专业知识的情况下构建和启动 SaaS 产品的人。无论您是完全的初学者还是有一些技术背景，我们的平台都让产品开发变得触手可及。"
+          }
+        },
+        {
+          "id": "how-fast-launch",
+          "question": {
+            "en": "How quickly can I launch my product with tenniszero.org?",
+            "zh": "使用 tenniszero.org 我能多快启动我的产品？"
+          },
+          "answer": {
+            "en": "With tenniszero.org, you can launch your MVP in days instead of months. Our production-ready templates and streamlined deployment pipeline allow you to focus on your business logic rather than infrastructure setup.",
+            "zh": "使用 tenniszero.org，您可以在几天而不是几个月内启动您的 MVP。我们的生产就绪模板和简化的部署流程让您专注于业务逻辑而不是基础设施设置。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "name": {
+        "en": "Pricing & Plans",
+        "zh": "定价与计划"
+      },
+      "questions": [
+        {
+          "id": "free-vs-pro",
+          "question": {
+            "en": "What's the difference between Free and Pro plans?",
+            "zh": "免费版和专业版有什么区别？"
+          },
+          "answer": {
+            "en": "The Free plan includes previous version open-source templates and community support. The Pro plan ($199 one-time) includes continuously updated tenniszero.org tutorials, AI coding tutorials, real-time updates, priority support, analytics dashboard, exclusive user community, 10 premium templates (worth $100), and $50 AI API credits.",
+            "zh": "免费版包括延后版本的开源模板和社区支持。专业版（一次性付费 ¥1299）包括持续更新的 tenniszero.org 教程、AI 编程教程、实时更新、优先支持、分析仪表板、专属用户社区、10 套高级模板（价值 100 美元）和 50 元 AI API 积分。"
+          }
+        },
+        {
+          "id": "one-time-payment",
+          "question": {
+            "en": "Is the Pro plan really a one-time payment?",
+            "zh": "专业版真的是一次性付费吗？"
+          },
+          "answer": {
+            "en": "Yes! The Pro plan is a one-time payment of $199 with no recurring fees. You get lifetime access to all updates, tutorials, and premium features. This includes all future template updates and new AI coding tutorials.",
+            "zh": "是的！专业版是一次性付费 ¥1299，没有重复费用。您可以终身访问所有更新、教程和高级功能。这包括所有未来的模板更新和新的 AI 编程教程。"
+          }
+        },
+        {
+          "id": "premium-templates-value",
+          "question": {
+            "en": "What are the 10 premium templates worth $100?",
+            "zh": "价值 100 美元的 10 套高级模板是什么？"
+          },
+          "answer": {
+            "en": "The premium templates include advanced SaaS applications, e-commerce platforms, AI-powered tools, dashboard templates, landing page collections, and specialized industry solutions. Each template is production-ready and would cost $10-15 individually.",
+            "zh": "高级模板包括高级 SaaS 应用程序、电商平台、AI 驱动工具、仪表板模板、落地页集合和专业行业解决方案。每个模板都是生产就绪的，单独购买需要 10-15 美元。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "name": {
+        "en": "Technical",
+        "zh": "技术问题"
+      },
+      "questions": [
+        {
+          "id": "tech-stack",
+          "question": {
+            "en": "What technology stack does tenniszero.org use?",
+            "zh": "tenniszero.org 使用什么技术栈？"
+          },
+          "answer": {
+            "en": "tenniszero.org is built with modern technologies including Svelte 5, SvelteKit, TailwindCSS, TypeScript, and integrates with various AI APIs. Our templates support multiple deployment options including Vercel, Netlify, and traditional hosting.",
+            "zh": "tenniszero.org 使用现代技术构建，包括 Svelte 5、SvelteKit、TailwindCSS、TypeScript，并与各种 AI API 集成。我们的模板支持多种部署选项，包括 Vercel、Netlify 和传统托管。"
+          }
+        },
+        {
+          "id": "no-coding-required",
+          "question": {
+            "en": "Do I need coding experience to use tenniszero.org?",
+            "zh": "使用 tenniszero.org 需要编程经验吗？"
+          },
+          "answer": {
+            "en": "No coding experience is required! tenniszero.org is specifically designed for non-programmers. Our tutorials guide you through every step, from setup to deployment. However, basic computer skills and willingness to learn are helpful.",
+            "zh": "不需要编程经验！tenniszero.org 专为非程序员设计。我们的教程会指导您完成从设置到部署的每一步。但是，基本的计算机技能和学习意愿是有帮助的。"
+          }
+        },
+        {
+          "id": "ai-api-credits",
+          "question": {
+            "en": "How do the $50 AI API credits work?",
+            "zh": "50 元 AI API 积分如何使用？"
+          },
+          "answer": {
+            "en": "The $50 AI API credits can be used with popular AI services like OpenAI, Anthropic, or Google AI. These credits help you get started with AI features in your applications without upfront costs. Credits are provided as account balance or service vouchers.",
+            "zh": "50 元 AI API 积分可用于流行的 AI 服务，如 OpenAI、Anthropic 或 Google AI。这些积分帮助您在应用程序中开始使用 AI 功能，无需前期成本。积分以账户余额或服务券的形式提供。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "name": {
+        "en": "Support & Community",
+        "zh": "支持与社区"
+      },
+      "questions": [
+        {
+          "id": "get-support",
+          "question": {
+            "en": "How can I get support?",
+            "zh": "我如何获得支持？"
+          },
+          "answer": {
+            "en": "Free users get community support through our forums and documentation. Pro users get priority support with faster response times, access to our exclusive user community, and direct assistance with implementation questions.",
+            "zh": "免费用户通过我们的论坛和文档获得社区支持。专业版用户获得优先支持，响应时间更快，可以访问我们的专属用户社区，并在实施问题上获得直接帮助。"
+          }
+        },
+        {
+          "id": "user-community",
+          "question": {
+            "en": "What is the exclusive paid user community?",
+            "zh": "专属付费用户社区是什么？"
+          },
+          "answer": {
+            "en": "Our paid user community is a private space where Pro users can network, share experiences, get feedback on their projects, and collaborate. It includes regular live sessions, expert AMAs, and early access to new features and templates.",
+            "zh": "我们的付费用户社区是一个私人空间，专业版用户可以在这里建立网络、分享经验、获得项目反馈和协作。它包括定期的直播会议、专家问答和新功能及模板的早期访问。"
+          }
+        },
+        {
+          "id": "updates-frequency",
+          "question": {
+            "en": "How often do you release updates?",
+            "zh": "你们多久发布一次更新？"
+          },
+          "answer": {
+            "en": "We release updates regularly with new features, templates, and tutorials. Pro users get real-time updates and early access to new content. Free users receive updates with a one-version delay to ensure stability.",
+            "zh": "我们定期发布包含新功能、模板和教程的更新。专业版用户获得实时更新和新内容的早期访问。免费用户会延后一个版本收到更新，以确保稳定性。"
+          }
+        }
+      ]
+    }
+  ]
+}

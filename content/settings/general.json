@@ -1,0 +1,13 @@
+{
+  "title": "Vibby",
+  "description": "Transform your ideas into reality with our comprehensive development platform",
+  "url": "https://tenniszero.org",
+  "email": "hello@vibby.dev",
+  "seo": {
+    "keywords": ["AI", "SaaS", "Startup", "Development", "Boilerplate", "No-code"],
+    "author": "tenniszero.org Team",
+    "twitterHandle": "@vibbyai",
+    "facebookAppId": "",
+    "defaultOgImage": "/og-default.jpg"
+  }
+}

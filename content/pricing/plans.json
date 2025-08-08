@@ -1,0 +1,152 @@
+{
+  "title": {
+    "en": "Simple, transparent pricing",
+    "zh": "简单透明的定价"
+  },
+  "subtitle": {
+    "en": "Choose the plan that's right for you",
+    "zh": "选择适合您的计划"
+  },
+  "plans": [
+    {
+      "id": "free",
+      "name": {
+        "en": "Free",
+        "zh": "免费版"
+      },
+      "price": {
+        "en": "$0",
+        "zh": "¥0"
+      },
+      "period": {
+        "en": "forever",
+        "zh": "永久免费"
+      },
+      "description": {
+        "en": "Perfect for getting started",
+        "zh": "完美的入门选择"
+      },
+      "features": [
+        {
+          "en": "Previous version free open source templates",
+          "zh": "延后一个版本的免费开源模板"
+        },
+        {
+          "en": "Community support",
+          "zh": "社区支持"
+        },
+        {
+          "en": "Basic documentation",
+          "zh": "基础文档"
+        },
+        {
+          "en": "MIT License",
+          "zh": "MIT 开源协议"
+        }
+      ],
+      "buttonText": {
+        "en": "Get Started Free",
+        "zh": "免费开始"
+      },
+      "buttonUrl": "/auth/signup?plan=free",
+      "popular": false
+    },
+    {
+      "id": "pro",
+      "name": {
+        "en": "Pro",
+        "zh": "专业版"
+      },
+      "price": {
+        "en": "$199",
+        "zh": "¥1299"
+      },
+      "period": {
+        "en": "one-time",
+        "zh": "一次性付费"
+      },
+      "description": {
+        "en": "Everything you need to ship fast",
+        "zh": "快速发布所需的一切"
+      },
+      "features": [
+        {
+          "en": "✅ Continuously updated tenniszero.org tutorials",
+          "zh": "✅ 持续更新的 tenniszero.org 使用教程"
+        },
+        {
+          "en": "✅ Continuously updated AI coding tutorials",
+          "zh": "✅ 持续更新的 AI coding 教程"
+        },
+        {
+          "en": "✅ Real-time updates",
+          "zh": "✅ 实时更新"
+        },
+        {
+          "en": "✅ Priority feature requests",
+          "zh": "✅ 迭代需求优先处理"
+        },
+        {
+          "en": "✅ Free analytics dashboard",
+          "zh": "✅ 免费的数据统计"
+        },
+        {
+          "en": "✅ Exclusive paid user community",
+          "zh": "✅ 付费用户群"
+        },
+        {
+          "en": "✅ 10 premium templates (worth $100)",
+          "zh": "✅ 送10套高级模板（单买要100刀）"
+        },
+        {
+          "en": "✅ $50 AI API credits included",
+          "zh": "✅ 赠送50元的大模型API接口credits"
+        }
+      ],
+      "buttonText": {
+        "en": "Get Pro Access",
+        "zh": "获取专业版"
+      },
+      "buttonUrl": "/auth/signup?plan=pro",
+      "popular": true
+    }
+  ],
+  "faq": {
+    "title": {
+      "en": "Frequently Asked Questions",
+      "zh": "常见问题"
+    },
+    "items": [
+      {
+        "question": {
+          "en": "What's included in the free version?",
+          "zh": "免费版包含什么？"
+        },
+        "answer": {
+          "en": "The free version includes previous version templates with open source license, community support, and basic documentation.",
+          "zh": "免费版包含延后一个版本的开源模板、社区支持和基础文档。"
+        }
+      },
+      {
+        "question": {
+          "en": "Is this a subscription or one-time payment?",
+          "zh": "这是订阅还是一次性付费？"
+        },
+        "answer": {
+          "en": "The Pro plan is a one-time payment of $199. No recurring fees, lifetime access to updates.",
+          "zh": "专业版是一次性付费199美元，无重复费用，终身享受更新。"
+        }
+      },
+      {
+        "question": {
+          "en": "What are the premium templates worth?",
+          "zh": "高级模板价值多少？"
+        },
+        "answer": {
+          "en": "The 10 premium templates are individually worth $100 total if purchased separately. They include advanced SaaS, e-commerce, and AI-powered applications.",
+          "zh": "10套高级模板单独购买总价值100美元，包括高级SaaS、电商和AI驱动的应用程序。"
+        }
+      }
+    ]
+  }
+}

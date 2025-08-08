@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "supportedLanguages": [
+      {
+        "code": "en",
+        "name": "English",
+        "nativeName": "English",
+        "flag": "🇺🇸",
+        "isDefault": true
+      },
+      {
+        "code": "zh",
+        "name": "Chinese",
+        "nativeName": "中文",
+        "flag": "🇨🇳",
+        "isDefault": false
+      }
+    ]
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact",
+      "blog": "Blog",
+      "pricing": "Pricing",
+      "features": "Features"
+    },
+    "buttons": {
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "readMore": "Read More",
+      "viewAll": "View All",
+      "previous": "Previous",
+      "next": "Next",
+      "search": "Search",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "save": "Save",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Insights, tutorials, and updates from our team. Learn how to build better products and grow your business.",
+      "tableOfContents": "Table of Contents",
+      "relatedArticles": "Related Articles",
+      "continueReading": "Continue reading with these related posts"
+    },
+    "common": {
+      "loading": "Loading...",
+      "error": "Error",
+      "success": "Success",
+      "warning": "Warning",
+      "info": "Info"
+    }
+  },
+  "zh": {
+    "nav": {
+      "home": "首页",
+      "about": "关于",
+      "contact": "联系",
+      "blog": "博客",
+      "pricing": "定价",
+      "features": "功能"
+    },
+    "buttons": {
+      "getStarted": "开始使用",
+      "learnMore": "了解更多",
+      "readMore": "阅读更多",
+      "viewAll": "查看全部",
+      "previous": "上一页",
+      "next": "下一页",
+      "search": "搜索",
+      "submit": "提交",
+      "cancel": "取消",
+      "save": "保存",
+      "edit": "编辑",
+      "delete": "删除"
+    },
+    "blog": {
+      "title": "博客",
+      "subtitle": "来自我们团队的见解、教程和更新。学习如何构建更好的产品并发展您的业务。",
+      "tableOfContents": "目录",
+      "relatedArticles": "相关文章",
+      "continueReading": "继续阅读这些相关文章"
+    },
+    "common": {
+      "loading": "加载中...",
+      "error": "错误",
+      "success": "成功",
+      "warning": "警告",
+      "info": "信息"
+    }
+  }
+}

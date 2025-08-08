@@ -1,0 +1,82 @@
+{
+  "title": {
+    "en": "tenniszero.org",
+    "zh": "tenniszero.org"
+  },
+  "subtitle": {
+    "en": "Vibe Startup By AI Free",
+    "zh": "快速构建你的AI创业项目"
+  },
+  "primaryButton": {
+    "text": {
+      "en": "Start Vibing",
+      "zh": "Start Vibing"
+    },
+    "href": "#pricing",
+    "style": "primary"
+  },
+  "description": {
+    "zh": "AI SAAS boilerplate for Non-Programmers with authentication, payments, dashboard, and AI integrations.",
+    "en": "AI SAAS boilerplate for Non-Programmers with authentication, payments, dashboard, and AI integrations."
+  },
+  "badge": {
+    "en": "The future of product development is here",
+    "zh": "产品开发的未来就在这里"
+  },
+  "secondaryButton": {
+    "text": {
+      "en": "Explore Features",
+      "zh": "Explore Features"
+    },
+    "href": "#features",
+    "style": "secondary"
+  },
+  "heroFeatures": [
+    {
+      "id": "lightning-fast",
+      "icon": "zap",
+      "title": {
+        "en": "Lightning Fast",
+        "zh": "闪电般快速"
+      },
+      "description": {
+        "en": "Launch your product in days instead of months with our optimized workflow.",
+        "zh": "通过我们优化的工作流程，在几天而不是几个月内发布您的产品。"
+      }
+    },
+    {
+      "id": "rock-solid",
+      "icon": "shield",
+      "title": {
+        "en": "Rock Solid",
+        "zh": "坚如磐石"
+      },
+      "description": {
+        "en": "Built on proven technologies with enterprise-grade security and reliability.",
+        "zh": "基于经过验证的技术构建，具有企业级安全性和可靠性。"
+      }
+    },
+    {
+      "id": "built-for-growth",
+      "icon": "globe",
+      "title": {
+        "en": "Built for Growth",
+        "zh": "为增长而生"
+      },
+      "description": {
+        "en": "Scalable architecture that grows with your business from startup to enterprise.",
+        "zh": "可扩展的架构，随着您的业务从初创公司发展到企业级。"
+      }
+    }
+  ],
+  "backgroundVideo": {
+    "enabled": false,
+    "url": "",
+    "poster": ""
+  },
+  "backgroundImage": {
+    "enabled": true,
+    "url": "/images/hero-bg.jpg",
+    "alt": "tenniszero.org Hero Background"
+  }
+}
