@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "name": "Features",
+      "url": "#features",
+      "external": false
+    },
+    {
+      "name": "Pricing",
+      "url": "#pricing",
+      "external": false
+    },
+    {
+      "name": "About",
+      "url": "#about",
+      "external": false
+    },
+    {
+      "name": "Contact",
+      "url": "#contact",
+      "external": false
+    },
+    {
+      "name": "test",
+      "url": "/test",
+      "external": false
+    }
+  ]
+}

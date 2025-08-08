@@ -1,0 +1,1 @@
+import"../chunks/CWj6FrbW.js";import"../chunks/C4RsVXR4.js";import{f as a,a as e,n}from"../chunks/BgI7ZOGm.js";var r=a('<h1>Documentation System Test</h1> <p>If you can see this, the basic routing is working!</p> <a href="/docs/README">Go to README</a>',1);function p(o){var t=r();n(4),e(o,t)}export{p as component};
