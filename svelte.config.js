@@ -1,30 +1,18 @@
-import vercelAdapter from '@sveltejs/adapter-vercel';
-import cloudflareAdapter from '@sveltejs/adapter-cloudflare';
+import staticAdapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 
-// 根据环境变量选择适配器
-const ADAPTER_TYPE = process.env.ADAPTER || 'vercel';
-
-// 适配器配置
+// 使用静态适配器用于GitHub Pages
 const getAdapter = () => {
-	switch (ADAPTER_TYPE) {
-		case 'cloudflare':
-			console.log('🔶 使用 Cloudflare 适配器');
-			return cloudflareAdapter({
-				platformProxy: {
-					persist: false
-				}
-			});
-		case 'vercel':
-		default:
-			console.log('▲ 使用 Vercel 适配器');
-			return vercelAdapter({
-				// 确保预编译的内容文件和文档被包含在部署中
-				includeFiles: ['src/lib/generated/**/*', 'docs/**/*']
-			});
-	}
+	console.log('📄 使用 Static 适配器 (GitHub Pages)');
+	return staticAdapter({
+		pages: 'build',
+		assets: 'build',
+		fallback: 'index.html',
+		precompress: false,
+		strict: false
+	});
 };
 
 /** @type {import('@sveltejs/kit').Config} */
