@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Site Config</title>
+</head>
+<body>
+    <h1>Site Config Test</h1>
+    <div id="output"></div>
+    <button onclick="setGameMode()">Set Game Mode</button>
+    <button onclick="checkConfig()">Check Config</button>
+    <button onclick="clearConfig()">Clear Config</button>
+
+    <script>
+        function checkConfig() {
+            const stored = localStorage.getItem('vibby-site-config');
+            document.getElementById('output').innerHTML = `
+                <h3>Current localStorage:</h3>
+                <pre>${stored || 'null'}</pre>
+            `;
+            console.log('Current config:', stored);
+        }
+
+        function setGameMode() {
+            const config = { type: 'site-game', title: 'tenniszero.org', description: 'AI SAAS boilerplate' };
+            localStorage.setItem('vibby-site-config', JSON.stringify(config));
+            checkConfig();
+            alert('Game mode set! Now visit http://localhost:5173/');
+        }
+
+        function clearConfig() {
+            localStorage.removeItem('vibby-site-config');
+            checkConfig();
+        }
+
+        // Check on load
+        checkConfig();
+    </script>
+</body>
+</html>

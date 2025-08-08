@@ -1,0 +1,225 @@
+{
+  "companyInfo": {
+    "name": "tenniszero.org",
+    "description": {
+      "en": "Empowering entrepreneurs to build and launch successful startups with AI-powered tools and comprehensive support.",
+      "zh": "通过 AI 驱动的工具和全面支持，赋能企业家构建和启动成功的创业项目。"
+    },
+    "logo": {
+      "text": "tenniszero.org",
+      "url": "/"
+    }
+  },
+  "links": [
+    {
+      "category": {
+        "en": "Product",
+        "zh": "产品"
+      },
+      "items": [
+        {
+          "label": {
+            "en": "Features",
+            "zh": "功能特色"
+          },
+          "href": "#features"
+        },
+        {
+          "label": {
+            "en": "Pricing",
+            "zh": "定价"
+          },
+          "href": "#pricing"
+        },
+        {
+          "label": {
+            "en": "Templates",
+            "zh": "模板"
+          },
+          "href": "/templates"
+        },
+        {
+          "label": {
+            "en": "Documentation",
+            "zh": "文档"
+          },
+          "href": "/docs"
+        }
+      ]
+    },
+    {
+      "category": {
+        "en": "Company",
+        "zh": "公司"
+      },
+      "items": [
+        {
+          "label": {
+            "en": "About",
+            "zh": "关于我们"
+          },
+          "href": "/about"
+        },
+        {
+          "label": {
+            "en": "Blog",
+            "zh": "博客"
+          },
+          "href": "/blog"
+        },
+        {
+          "label": {
+            "en": "Contact",
+            "zh": "联系我们"
+          },
+          "href": "/contact"
+        },
+        {
+          "label": {
+            "en": "Careers",
+            "zh": "招聘"
+          },
+          "href": "/careers"
+        }
+      ]
+    },
+    {
+      "category": {
+        "en": "Support",
+        "zh": "支持"
+      },
+      "items": [
+        {
+          "label": {
+            "en": "Help Center",
+            "zh": "帮助中心"
+          },
+          "href": "/help"
+        },
+        {
+          "label": {
+            "en": "Community",
+            "zh": "社区"
+          },
+          "href": "/community"
+        },
+        {
+          "label": {
+            "en": "FAQ",
+            "zh": "常见问题"
+          },
+          "href": "#faq"
+        },
+        {
+          "label": {
+            "en": "Status",
+            "zh": "服务状态"
+          },
+          "href": "/status"
+        }
+      ]
+    },
+    {
+      "category": {
+        "en": "Legal",
+        "zh": "法律"
+      },
+      "items": [
+        {
+          "label": {
+            "en": "Privacy Policy",
+            "zh": "隐私政策"
+          },
+          "href": "/privacy"
+        },
+        {
+          "label": {
+            "en": "Terms of Service",
+            "zh": "服务条款"
+          },
+          "href": "/terms"
+        },
+        {
+          "label": {
+            "en": "Cookie Policy",
+            "zh": "Cookie 政策"
+          },
+          "href": "/cookies"
+        }
+      ]
+    }
+  ],
+  "socialMedia": [
+    {
+      "platform": "twitter",
+      "label": "Twitter",
+      "url": "https://twitter.com/vibbyai",
+      "icon": "twitter"
+    },
+    {
+      "platform": "github",
+      "label": "GitHub",
+      "url": "https://github.com/vibbyai",
+      "icon": "github"
+    },
+    {
+      "platform": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/company/vibbyai",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "discord",
+      "label": "Discord",
+      "url": "https://discord.gg/vibbyai",
+      "icon": "discord"
+    }
+  ],
+  "newsletter": {
+    "title": {
+      "en": "Stay Updated",
+      "zh": "保持更新"
+    },
+    "description": {
+      "en": "Get the latest updates, tutorials, and startup tips delivered to your inbox.",
+      "zh": "获取最新更新、教程和创业技巧，直接发送到您的邮箱。"
+    },
+    "placeholder": {
+      "en": "Enter your email",
+      "zh": "输入您的邮箱"
+    },
+    "buttonText": {
+      "en": "Subscribe",
+      "zh": "订阅"
+    }
+  },
+  "copyright": {
+    "text": {
+      "en": "© 2024 tenniszero.org. All rights reserved.",
+      "zh": "© 2024 tenniszero.org. 保留所有权利。"
+    }
+  },
+  "bottomLinks": [
+    {
+      "label": {
+        "en": "Privacy",
+        "zh": "隐私"
+      },
+      "href": "/privacy"
+    },
+    {
+      "label": {
+        "en": "Terms",
+        "zh": "条款"
+      },
+      "href": "/terms"
+    },
+    {
+      "label": {
+        "en": "Sitemap",
+        "zh": "网站地图"
+      },
+      "href": "/sitemap.xml"
+    }
+  ]
+}

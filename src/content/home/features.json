@@ -1,0 +1,133 @@
+{
+  "sectionTitle": {
+    "en": "Why Choose tenniszero.org?",
+    "zh": "为什么选择 tenniszero.org？"
+  },
+  "sectionSubtitle": {
+    "en": "Everything you need to launch your startup quickly and efficiently",
+    "zh": "快速高效启动创业项目所需的一切"
+  },
+  "features": [
+    {
+      "id": "rapid-deployment",
+      "icon": "rocket",
+      "title": {
+        "en": "Rapid Deployment",
+        "zh": "快速部署"
+      },
+      "description": {
+        "en": "Deploy your applications instantly with our streamlined deployment pipeline",
+        "zh": "通过我们简化的部署流程即时部署您的应用程序"
+      },
+      "benefits": [
+        {
+          "en": "One-click deployment",
+          "zh": "一键部署"
+        },
+        {
+          "en": "Automatic scaling",
+          "zh": "自动扩展"
+        },
+        {
+          "en": "Zero downtime updates",
+          "zh": "零停机更新"
+        }
+      ]
+    },
+    {
+      "id": "complete-templates",
+      "icon": "template",
+      "title": {
+        "en": "Complete Boilerplates",
+        "zh": "完整模板"
+      },
+      "description": {
+        "en": "Start with production-ready templates for any type of application",
+        "zh": "从适用于任何类型应用程序的生产就绪模板开始"
+      },
+      "benefits": [
+        {
+          "en": "10+ premium templates",
+          "zh": "10+ 高级模板"
+        },
+        {
+          "en": "Industry best practices",
+          "zh": "行业最佳实践"
+        },
+        {
+          "en": "Customizable components",
+          "zh": "可定制组件"
+        }
+      ]
+    },
+    {
+      "id": "ai-powered",
+      "icon": "zap",
+      "title": {
+        "en": "AI-Powered Development",
+        "zh": "AI 驱动开发"
+      },
+      "description": {
+        "en": "Leverage artificial intelligence to accelerate your development process",
+        "zh": "利用人工智能加速您的开发过程"
+      },
+      "benefits": [
+        {
+          "en": "Smart code generation",
+          "zh": "智能代码生成"
+        },
+        {
+          "en": "Automated testing",
+          "zh": "自动化测试"
+        },
+        {
+          "en": "Performance optimization",
+          "zh": "性能优化"
+        }
+      ]
+    },
+    {
+      "id": "comprehensive-support",
+      "icon": "shield",
+      "title": {
+        "en": "Comprehensive Support",
+        "zh": "全面支持"
+      },
+      "description": {
+        "en": "Get expert guidance and community support throughout your journey",
+        "zh": "在整个过程中获得专家指导和社区支持"
+      },
+      "benefits": [
+        {
+          "en": "24/7 priority support",
+          "zh": "24/7 优先支持"
+        },
+        {
+          "en": "Expert consultations",
+          "zh": "专家咨询"
+        },
+        {
+          "en": "Active community",
+          "zh": "活跃社区"
+        }
+      ]
+    }
+  ],
+  "ctaSection": {
+    "title": {
+      "en": "Ready to Start Building?",
+      "zh": "准备开始构建了吗？"
+    },
+    "description": {
+      "en": "Join thousands of entrepreneurs who have successfully launched their startups with tenniszero.org",
+      "zh": "加入数千名使用 tenniszero.org 成功启动创业项目的企业家"
+    },
+    "button": {
+      "text": {
+        "en": "Get Started Now",
+        "zh": "立即开始"
+      },
+      "href": "#pricing"
+    }
+  }
+}

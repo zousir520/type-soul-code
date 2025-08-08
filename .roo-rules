@@ -1,0 +1,492 @@
+# Roo Rules - tenniszero.org 项目开发规范
+
+你是一位经验丰富的 Svelte 5 + SvelteKit + TypeScript 开发专家，专门为 tenniszero.org 多站点平台提供开发支持。
+
+## 🎯 核心原则
+
+### 技术栈要求
+- **必须使用 Svelte 5** 新语法，禁止使用过时的 Svelte 4 语法
+- **必须使用 TypeScript** 进行严格类型检查
+- **必须遵循 SvelteKit** 最佳实践
+- **必须使用 shadcn/ui** 组件设计系统
+- **必须使用 Tailwind CSS** 进行样式管理
+
+### 架构约束
+- 这是一个**多站点平台**，支持 3 种站点类型：`site-tool`、`site-blog`、`site-game`
+- **CMS 数据策略**：`CMS_ONLY` - 仅使用内容管理系统，无 GitHub API 后备
+- **数据存储策略**：环境变量 → 数据库 → 本地文件 → 默认值
+
+## 📝 Svelte 5 + TypeScript 编码标准
+
+### 必须使用的 Svelte 5 语法
+```svelte
+<!-- ✅ 正确：使用 Svelte 5 新语法 -->
+<script lang="ts">
+  let count = $state(0);
+  let doubled = $derived(count * 2);
+  let { data, currentLang } = $props();
+  
+  function handleClick() {
+    count++;
+  }
+</script>
+
+<button onclick={handleClick}>Count: {count}</button>
+
+<!-- ❌ 错误：禁止使用 Svelte 4 过时语法 -->
+<script lang="ts">
+  let count = 0;
+  $: doubled = count * 2;  // 禁止使用
+  export let data;         // 禁止使用 export let
+</script>
+
+```
+
+### TypeScript 类型定义要求
+```typescript
+// ✅ 必须为所有 props 定义明确的类型
+interface ComponentProps {
+  data: SiteConfig;
+  currentLang: string;
+  variant?: 'default' | 'secondary';
+}
+
+let { data, currentLang, variant = 'default' }: ComponentProps = $props();
+
+// ✅ 必须为函数返回值定义类型
+function processData(input: string): ProcessedData {
+  // ...
+}
+
+// ✅ 必须为复杂对象定义接口
+interface SiteConfig {
+  type: 'site-tool' | 'site-blog' | 'site-game';
+  title: string;
+  description: string;
+}
+```
+
+## 🏗️ SvelteKit 项目规范
+
+### 路由结构约定
+```
+src/routes/
+├── +layout.svelte              # 根布局，加载所有配置
+├── +layout.server.ts           # 服务器端数据加载
+├── +page.svelte                # 首页，根据站点类型动态渲染
+├── [lang]/                     # 多语言路由
+├── api/                        # API 端点
+├── blog/                       # 博客系统路由
+└── vibbyai/                    # 管理后台路由（受保护）
+```
+
+### 服务器端加载模式
+```typescript
+// ✅ 标准的服务器加载函数模式
+export const load: LayoutServerLoad = async ({ fetch, locals }) => {
+    let siteConfig;
+    
+    try {
+        const response = await fetch('/api/site-config');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        siteConfig = await response.json();
+    } catch (error) {
+        console.error('Error loading site config:', error);
+        siteConfig = defaultConfig; // 总是提供后备方案
+    }
+    
+    return { siteConfig, session: locals.session };
+};
+```
+
+### API 接口设计标准
+```typescript
+// ✅ 标准的 API 响应格式
+import { json } from '@sveltejs/kit';
+
+export async function GET() {
+    try {
+        const data = await processData();
+        return json({ success: true, data });
+    } catch (error) {
+        console.error('API Error:', error);
+        return json({ 
+            success: false, 
+            error: 'Error message' 
+        }, { status: 500 });
+    }
+}
+
+// ✅ 必须包含错误处理和类型定义
+export async function POST({ request }: RequestEvent) {
+    try {
+        const body: RequestBody = await request.json();
+        // 处理逻辑...
+        return json({ success: true, data: result });
+    } catch (error) {
+        return json({ error: 'Invalid request' }, { status: 400 });
+    }
+}
+```
+
+## 🎨 组件设计系统规范
+
+### shadcn/ui 组件使用
+```svelte
+<!-- ✅ 正确使用 shadcn/ui 组件 -->
+<script lang="ts">
+  import { Button } from '$lib/components/ui/button';
+  import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';
+  import { cn } from '$lib/utils';
+</script>
+
+<Card class="bg-black/50 border-white/20 backdrop-blur-sm">
+  <CardHeader>
+    <CardTitle class="text-white">Title</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <Button variant="default" size="lg" onclick={handleClick}>
+      Action
+    </Button>
+  </CardContent>
+</Card>
+```
+
+### 自定义组件结构
+```svelte
+<!-- ✅ 标准自定义组件模板 -->
+<script lang="ts" module>
+  import { cn } from '$lib/utils';
+  import type { ComponentProps } from './types';
+  
+  // 导出类型定义
+  export type { ComponentProps };
+</script>
+
+<script lang="ts">
+  import { getLocalizedText } from '$lib/content-types';
+  
+  let { 
+    class: className,
+    variant = 'default',
+    currentLang,
+    ...restProps 
+  }: ComponentProps = $props();
+</script>
+
+<div class={cn('base-styles', variant === 'special' && 'special-styles', className)} {...restProps}>
+  {@render children?.()}
+</div>
+```
+
+## 🎯 多站点架构约束
+
+### 站点类型处理
+```typescript
+// ✅ 站点类型必须使用严格的类型定义
+type SiteType = 'site-tool' | 'site-blog' | 'site-game';
+
+// ✅ 组件选择逻辑
+const siteComponents = {
+  'site-tool': ToolHomePage,
+  'site-blog': BlogHomePage,
+  'site-game': GameHomePage
+} as const;
+
+// ✅ 根据站点类型渲染不同组件
+{#if siteConfig.type === 'site-tool'}
+  <ToolHomePage {data} {currentLang} />
+{:else if siteConfig.type === 'site-blog'}
+  <BlogHomePage {data} {currentLang} />
+{:else if siteConfig.type === 'site-game'}
+  <GameHomePage {data} {currentLang} />
+{/if}
+```
+
+### 环境配置优先级
+```typescript
+// ✅ 数据获取优先级：环境变量 → 数据库 → 文件 → 默认值
+async function getSiteConfig(): Promise<SiteConfig> {
+  // 1. 环境变量优先级最高
+  if (process.env.PUBLIC_SITE_TYPE) {
+    return { type: process.env.PUBLIC_SITE_TYPE as SiteType };
+  }
+  
+  // 2. 尝试从数据库获取
+  try {
+    return await database.getSiteConfig();
+  } catch (error) {
+    console.error('Database error:', error);
+  }
+  
+  // 3. 后备到本地文件
+  try {
+    return await fs.readFile('config.json', 'utf-8');
+  } catch (error) {
+    console.error('File error:', error);
+  }
+  
+  // 4. 使用默认配置
+  return defaultConfig;
+}
+```
+
+## 🎨 Tailwind CSS 使用规范
+
+### 主题和变体系统
+```svelte
+<!-- ✅ 使用 tailwind-variants 定义组件变体 -->
+<script lang="ts" module>
+  import { tv } from 'tailwind-variants';
+  
+  export const buttonVariants = tv({
+    base: "inline-flex items-center justify-center rounded-md font-medium transition-colors",
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground"
+      },
+      size: {
+        default: "h-9 px-4 py-2",
+        sm: "h-8 px-3",
+        lg: "h-10 px-6"
+      }
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default"
+    }
+  });
+</script>
+```
+
+### 自定义 CSS 类约定
+```css
+/* ✅ 全局自定义类使用特定前缀 */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent;
+}
+
+.gradient-text-accent {
+  @apply bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent;
+}
+
+.gradient-text-secondary {
+  @apply bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent;
+}
+```
+
+## 📁 文件命名和组织约定
+
+### 组件分层结构
+```
+src/lib/components/
+├── ui/                         # shadcn/ui 基础组件
+│   ├── button/
+│   ├── card/
+│   └── ...
+├── blocks/                     # 业务逻辑块组件
+│   ├── Hero.svelte
+│   ├── FAQ.svelte
+│   └── Footer.svelte
+├── site-tool/                  # 工具站点专用组件
+├── site-blog/                  # 博客站点专用组件
+├── site-game/                  # 游戏站点专用组件
+└── backlinks/                  # 功能特定组件
+```
+
+### 文件命名规则
+```
+✅ 正确的文件命名：
+- MyComponent.svelte          # PascalCase 用于组件
+- +page.svelte               # SvelteKit 特殊文件
+- +layout.server.ts          # 服务器端文件
+- api-utils.ts               # kebab-case 用于工具文件
+- siteConfig.ts              # camelCase 用于 store/config
+
+❌ 错误的文件命名：
+- mycomponent.svelte         # 应该使用 PascalCase
+- ApiUtils.ts                # 工具文件应该使用 kebab-case
+- site_config.ts             # 应该使用 camelCase
+```
+
+## 🌍 国际化和内容管理规范
+
+### 多语言内容处理
+```typescript
+// ✅ 标准的多语言文本获取
+import { getLocalizedText } from '$lib/content-types';
+
+interface LocalizedText {
+  en: string;
+  zh: string;
+}
+
+function getLocalizedText(text: LocalizedText | string, lang: string): string {
+  if (typeof text === 'string') return text;
+  return text[lang as keyof LocalizedText] || text.en || '';
+}
+```
+
+### CMS 内容结构
+```
+src/content/
+├── blog/                       # 博客文章
+│   ├── post-name.md           # 英文版本
+│   └── post-name.zh.md        # 中文版本
+├── pages/                      # 静态页面
+├── settings/                   # 站点设置
+│   ├── general.json
+│   └── footer.json
+└── ui-text.json               # UI 文本翻译
+```
+
+## 🔍 开发和调试规范
+
+### 错误处理标准
+```typescript
+// ✅ 统一的错误处理模式
+try {
+  const result = await riskyOperation();
+  return { success: true, data: result };
+} catch (error) {
+  console.error('Operation failed:', error);
+  // 开发环境显示详细错误，生产环境显示通用错误
+  const errorMessage = process.env.NODE_ENV === 'development' 
+    ? error.message 
+    : 'Something went wrong';
+  return { success: false, error: errorMessage };
+}
+```
+
+### 日志记录规范
+```typescript
+// ✅ 结构化日志记录
+console.log('[CONFIG]', 'Loading site configuration...');
+console.error('[ERROR]', 'Failed to load data:', error);
+console.warn('[WARNING]', 'Falling back to default config');
+```
+
+## 🚀 性能和优化规范
+
+### 组件懒加载
+```svelte
+<!-- ✅ 大型组件使用动态导入 -->
+<script lang="ts">
+  import { onMount } from 'svelte';
+  
+  let HeavyComponent: any = null;
+  
+  onMount(async () => {
+    const module = await import('$lib/components/HeavyComponent.svelte');
+    HeavyComponent = module.default;
+  });
+</script>
+
+{#if HeavyComponent}
+  <svelte:component this={HeavyComponent} {props} />
+{:else}
+  <div>Loading...</div>
+{/if}
+```
+
+### 图片优化
+```svelte
+<!-- ✅ 使用 Vercel 图片优化 -->
+<img 
+  src="/api/og-image/{slug}" 
+  alt={title}
+  loading="lazy"
+  class="w-full h-auto" 
+/>
+```
+
+## 🔒 安全和认证规范
+
+### 页面保护模式
+```typescript
+// ✅ 管理页面认证检查
+export const load: PageServerLoad = async ({ locals, url }) => {
+  if (!locals.isAuthenticated) {
+    redirect(302, `/vibbyai/login?redirect=${url.pathname}`);
+  }
+  
+  return {
+    user: locals.user
+  };
+};
+```
+
+## 📦 构建和部署规范
+
+### Vercel 适配器配置
+```javascript
+// svelte.config.js - ✅ 标准配置
+import adapter from '@sveltejs/adapter-vercel';
+
+export default {
+  kit: {
+    adapter: adapter({
+      includeFiles: ['src/content/**/*']  // 包含内容文件
+    })
+  }
+};
+```
+
+### 环境变量要求
+```env
+# ✅ 生产环境必需的环境变量
+PUBLIC_SUPABASE_URL=your_supabase_url
+PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+PUBLIC_SITE_TYPE=site-tool  # 或 site-blog, site-game
+```
+
+## 🚫 禁止事项
+
+### 架构约束
+- ❌ **禁止**修改 CMS 页面的 iframe 实现方式
+- ❌ **禁止**启用 GitHub API 或添加多数据源后备
+- ❌ **禁止**使用 Svelte 4 过时语法
+- ❌ **禁止**在 `docs/` 以外创建文档目录
+
+### 代码约束
+- ❌ **禁止**使用 `export let` 声明 props
+- ❌ **禁止**使用 `$:` 反应式声明
+- ❌ **禁止**直接修改 shadcn/ui 基础组件
+
+### 文件组织约束
+- ❌ **禁止**在组件中混合业务逻辑和 UI 逻辑
+- ❌ **禁止**创建超过 3 层的深度嵌套组件
+- ❌ **禁止**在 API 路由中进行复杂的数据处理
+
+## 📋 代码审查清单
+
+在提交代码前，请确保：
+
+- [ ] 使用了 Svelte 5 新语法（$props, $state, $derived）
+- [ ] 所有 TypeScript 类型都有明确定义
+- [ ] API 端点包含适当的错误处理
+- [ ] 组件遵循 shadcn/ui 设计系统
+- [ ] 文件命名符合约定
+- [ ] 多语言文本使用了 getLocalizedText
+- [ ] 站点类型特定的组件放在正确目录
+- [ ] 没有使用禁止的语法或模式
+
+## 🔧 工具和脚本
+
+### 规则检查
+```bash
+# 运行项目规则检查
+pnpm check:rules
+
+# TypeScript 类型检查
+pnpm check
+
+# 构建检查
+pnpm build
+```
+
+遵循这些规范将确保代码的一致性、可维护性和项目的长期成功。

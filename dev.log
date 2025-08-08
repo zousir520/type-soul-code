@@ -1,0 +1,394 @@
+
+> vibbyai@0.1.0 dev /Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org
+> npm run build:content && npm run build:docs && vite dev
+
+
+> vibbyai@0.1.0 build:content
+> node scripts/build-content.js
+
+🔄 开始构建内容...
+📄 处理文件: blog/.gitkeep
+📄 处理文件: blog/2025-01-03-typescript-advanced-features.md
+📄 处理文件: blog/2025-01-04-web-performance-optimization.md
+📄 处理文件: blog/2025-01-05-javascript-best-practices.md
+📄 处理文件: blog/2025-01-06-building-modern-web-apps.md
+📄 处理文件: blog/2025-01-07-welcome-to-vibby.md
+📄 处理文件: blog/2025-01-07-welcome-to-vibby.zh.md
+📄 处理文件: faq/general.json
+📄 处理文件: game/config.json
+📄 处理文件: home/faq.json
+📄 处理文件: home/features.json
+📄 处理文件: home/footer.json
+📄 处理文件: home/hero.json
+📄 处理文件: home/navigation.json
+📄 处理文件: pages/.gitkeep
+📄 处理文件: pages/about.md
+📄 处理文件: pages/contact.md
+📄 处理文件: pages/cookies.md
+📄 处理文件: pages/privacy.md
+📄 处理文件: pages/terms.md
+📄 处理文件: pricing/plans.json
+📄 处理文件: settings/general.json
+📄 处理文件: settings/navigation.json
+📄 处理文件: ui-text.json
+✅ 内容构建完成！生成了 24 个内容项
+📁 输出文件: /Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/src/lib/generated/content.ts
+
+> vibbyai@0.1.0 build:docs
+> node scripts/build-docs.js
+
+🔄 开始构建文档...
+📚 处理 en 语言文档...
+✅ en 语言文档处理完成，共 29 个页面
+📚 处理 zh 语言文档...
+✅ zh 语言文档处理完成，共 30 个页面
+✅ 文档构建完成！
+📁 输出文件: /Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/src/lib/generated/docs.ts
+🌍 支持语言: en, zh
+▲ 使用 Vercel 适配器
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+Port 5175 is in use, trying another one...
+Port 5176 is in use, trying another one...
+Port 5177 is in use, trying another one...
+Port 5178 is in use, trying another one...
+Port 5179 is in use, trying another one...
+
+  VITE v6.3.5  ready in 1380 ms
+
+  ➜  Local:   http://localhost:5180/
+  ➜  Network: use --host to expose
+Site type loaded from environment variable: site-tool
+Built sections for en from pre-generated data: 7
+Site type loaded from environment variable: site-tool
+Built sections for zh from pre-generated data: 7
+Site type loaded from environment variable: site-tool
+Site type loaded from environment variable: site-tool
+Site type loaded from environment variable: site-tool
+Site type loaded from environment variable: site-tool
+11:08:16 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+Site type loaded from environment variable: site-tool
+ ELIFECYCLE�ENOENT: no such file or directory, stat '/Users/charles/Andy/1-Project/202506tenniszero.orgitenniszero.orgi/.svelte-kit/types/src/routes/proxy+layout.server.ts'
+ENOENT: no such file or directory, stat '/Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/.svelte-kit/types/src/routes/proxy+layout.server.ts'
+sr) page reload .svelte-kit/generated/root.svelte
+11:12:28 [vite] (ssr) page reload src/routes/docs/+page.server.ts
+11:12:56 [vite] (ssr) page reload src/routes/docs/+page.svelte
+11:13:23 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+11:15:00 [vite] (ssr) page reload src/lib/generated/content.ts
+11:15:00 [vite] (ssr) page reload src/lib/generated/docs.ts
+11:15:01 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:15:01 [vite] (ssr) page reload .svelte-kit/generated/root.js
+Site type loaded from environment variable: site-tool
+Site type loaded from environment variable: site-tool
+11:18:36 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+Site type loaded from environment variable: site-tool
+Site type loaded from environment variable: site-tool
+11:20:16 [vite] (ssr) page reload src/routes/docs/[lang]/+page.server.ts
+11:20:16 [vite] (ssr) page reload src/routes/docs/[lang]/+page.svelte
+11:20:16 [vite] (ssr) page reload src/routes/docs/[lang]/[...slug]/+page.server.ts
+11:20:16 [vite] (ssr) page reload src/routes/docs/[lang]/[...slug]/+page.svelte
+ENOENT: no such file or directory, stat '/Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/.svelte-kit/types/src/routes/proxy+layout.server.ts'
+ENOENT: no such file or directory, stat '/Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/.svelte-kit/types/src/routes/proxy+layout.server.ts'
+ENOENT: no such file or directory, stat '/Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/.svelte-kit/types/src/routes/proxy+layout.server.ts'
+ENOENT: no such file or directory, stat '/Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/.svelte-kit/types/src/routes/proxy+layout.server.ts'
+11:21:40 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+ENOENT: no such file or directory, stat '/Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/.svelte-kit/types/src/routes/proxy+layout.ser11:21:56 [vite] (ssr) page reload src/lib/generated/docs.ts
+11:23:43 [vite] (ssr) page reload src/lib/generated/content.ts
+11:23:43 [vite] (ssr) page reload src/lib/generated/docs.ts
+11:23:44 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:23:44 [vite] (ssr) page reload .svelte-kit/generated/root.js
+11:30:40 [vite] (ssr) page reload src/lib/generated/docs.ts
+ENOENT: no such file or directory, stat '/Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/.svelte-kit/types/src/routes/proxy+layout.server.ts'
+ENOENT: no such file or directory, stat '/Users/charles/Andy/1-Project/202506/tenniszero.org/tenniszero.org/.svelte-kit/types/src/routes/proxy+page.server.ts'
+11:37:04 [vite] (ssr) page reload src/lib/generated/content.ts
+11:37:04 [vite] (ssr) page reload src/lib/generated/docs.ts
+11:37:05 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:37:05 [vite] (ssr) page reload .svelte-kit/generated/root.js
+13:03:52 [vite] (ssr) page reload src/routes/docs/+page.server.ts
+13:04:05 [vite] (ssr) page reload src/routes/docs/+page.server.ts
+13:04:11 [vite] (ssr) page reload src/routes/docs/+page.server.ts
+13:04:24 [vite] (ssr) page reload src/routes/docs/+page.svelte
+13:21:14 [vite] (ssr) page reload src/routes/docs/+page.svelte
+13:21:21 [vite] (ssr) page reload src/lib/generated/docs.ts
+13:23:16 [vite] (ssr) page reload src/lib/generated/docs.ts
+13:23:40 [vite] (ssr) page reload src/lib/generated/docs.ts
+13:32:35 [vite] (ssr) page reload src/lib/generated/docs.ts
+13:48:22 [vite] (ssr) page reload src/lib/generated/content.ts
+13:48:22 [vite] (ssr) page reload src/lib/generated/docs.ts
+13:48:23 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+13:48:23 [vite] (ssr) page reload .svelte-kit/generated/root.js
+13:50:21 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+13:50:21 [vite] (ssr) page reload .svelte-kit/generated/root.js
+14:05:43 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+14:06:11 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+14:06:30 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.svelte
+14:07:31 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+14:07:31 [vite] (ssr) page reload .svelte-kit/generated/root.js
+14:08:18 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+14:08:24 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+14:08:33 [vite] (ssr) page reload src/lib/generated/docs.ts
+14:08:53 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+14:08:53 [vite] (ssr) page reload .svelte-kit/generated/root.js
+14:09:26 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+14:09:50 [vite] (ssr) page reload src/lib/stores/search.ts
+14:10:18 [vite] (ssr) page reload src/lib/generated/content.ts
+14:10:22 [vite] (ssr) page reload src/lib/generated/content.ts
+14:10:23 [vite] (ssr) page reload src/lib/generated/docs.ts
+14:10:24 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+14:10:24 [vite] (ssr) page reload .svelte-kit/generated/root.js
+14:13:05 [vite] (ssr) page reload src/lib/generated/content.ts
+14:13:05 [vite] (ssr) page reload src/lib/generated/docs.ts
+14:13:07 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+14:13:07 [vite] (ssr) page reload .svelte-kit/generated/root.js
+14:15:07 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:15:13 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:15:19 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:15:26 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:15:40 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:16:32 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:17:37 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:17:43 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:17:44 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:17:54 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:18:05 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+14:18:34 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:18:40 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:18:40 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:18:46 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:18:58 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:19:03 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:20:30 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:20:48 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:22:25 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:24:31 [vite] (ssr) page reload src/lib/generated/content.ts
+14:24:32 [vite] (ssr) page reload src/lib/generated/docs.ts
+14:24:33 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+14:24:33 [vite] (ssr) page reload .svelte-kit/generated/root.js
+14:26:21 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+14:26:29 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:26:29 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:26:41 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:26:41 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:26:48 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+14:26:55 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:27:01 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:27:09 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:27:15 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+14:37:31 [vite] (ssr) page reload src/lib/generated/content.ts
+14:37:31 [vite] (ssr) page reload src/lib/generated/docs.ts
+14:37:32 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+14:37:32 [vite] (ssr) page reload .svelte-kit/generated/root.js
+14:38:08 [vite] (ssr) page reload src/lib/stores/search.ts
+14:38:14 [vite] (ssr) page reload src/lib/stores/search.ts
+14:38:23 [vite] (ssr) page reload src/lib/stores/search.ts
+14:38:41 [vite] (ssr) page reload src/lib/stores/search.ts
+14:40:45 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:47:47 [vite] (ssr) page reload src/lib/generated/content.ts
+14:47:47 [vite] (ssr) page reload src/lib/generated/docs.ts
+14:47:49 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+14:47:49 [vite] (ssr) page reload .svelte-kit/generated/root.js
+14:49:13 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+14:49:19 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+14:49:27 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:49:37 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:49:44 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:49:53 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:49:53 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:49:58 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:49:58 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:50:04 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:50:11 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:50:19 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:50:26 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:50:33 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+14:52:51 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:52:58 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+14:53:06 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+14:53:36 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+14:53:42 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+14:53:50 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:54:03 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+14:54:15 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+14:54:22 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+14:54:28 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+15:01:59 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:02:11 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:02:17 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:02:17 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:02:29 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+15:02:29 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+15:02:41 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+15:04:38 [vite] (ssr) page reload src/lib/generated/content.ts
+15:04:38 [vite] (ssr) page reload src/lib/generated/docs.ts
+15:04:40 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+15:04:40 [vite] (ssr) page reload .svelte-kit/generated/root.js
+15:06:32 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:06:38 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:06:48 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:06:59 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:09:04 [vite] (ssr) page reload src/lib/generated/content.ts
+15:09:04 [vite] (ssr) page reload src/lib/generated/docs.ts
+15:09:06 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+15:09:06 [vite] (ssr) page reload .svelte-kit/generated/root.js
+15:11:24 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:11:38 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:12:32 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:12:39 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:13:08 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+15:13:17 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:15:53 [vite] (ssr) page reload src/lib/generated/content.ts
+15:15:53 [vite] (ssr) page reload src/lib/generated/docs.ts
+15:15:55 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+15:15:55 [vite] (ssr) page reload .svelte-kit/generated/root.js
+15:18:09 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:18:18 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:18:32 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:18:44 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:18:51 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:19:24 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+15:19:43 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:20:03 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:22:24 [vite] (ssr) page reload src/lib/generated/content.ts
+15:22:24 [vite] (ssr) page reload src/lib/generated/docs.ts
+15:22:26 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+15:22:26 [vite] (ssr) page reload .svelte-kit/generated/root.js
+15:23:51 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:24:00 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+15:24:24 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+15:24:31 [vite] (ssr) page reload src/lib/components/docs/SearchDialog.svelte
+15:26:35 [vite] (ssr) page reload src/app.css
+15:26:45 [vite] (ssr) page reload src/lib/generated/content.ts
+15:26:46 [vite] (ssr) page reload src/lib/generated/docs.ts
+15:26:47 [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+15:26:47 [vite] (ssr) page reload .svelte-kit/generated/root.js
+15:31:02 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:31:15 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:31:31 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:31:39 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:31:48 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:35:39 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:35:51 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:35:57 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:36:04 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:36:17 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:37:50 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:38:06 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:38:24 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:38:32 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:38:54 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:39:00 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:39:08 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:39:22 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:39:32 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:41:48 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:42:09 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:43:04 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:43:11 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:43:19 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:43:25 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:06 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:46:15 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:46:23 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:30 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:36 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:46:45 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:46:51 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:51 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:57 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:11 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:23 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:41 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:47 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:47:53 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:48:00 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:48:06 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:50:55 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:51:19 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:51:28 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:58:07 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+cumentationLayout.svelte
+15:35:57 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:36:04 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:36:17 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:37:50 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:38:06 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:38:24 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:38:32 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:38:54 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:39:00 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:39:08 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:39:22 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:39:32 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:41:48 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:42:09 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:43:04 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:43:11 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:43:19 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:43:25 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:06 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:46:15 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:46:23 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:30 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:36 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:46:45 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:46:51 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:51 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:57 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:11 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:23 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:41 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:47 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:47:53 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:48:00 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:48:06 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:50:55 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:51:19 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:51:28 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:57:51 [vite] (ssr) page reload src/routes/docs/[lang=lang]/[...slug]/+page.server.ts
+15:57:58 [vite] (ssr) page reload src/routes/docs/[lang=lang]/[...slug]/+page.server.ts
+15:58:07 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+d src/routes/docs/[...slug]/+page.server.ts
+15:31:15 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:31:31 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:31:39 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:31:48 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:35:39 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:35:51 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:35:57 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:36:04 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:36:17 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:37:50 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:38:06 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:38:24 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:38:32 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:38:54 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:39:00 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:39:08 [vite] (ssr) page reload src/lib/docs/parseToc.ts
+15:39:22 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:39:32 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:41:48 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:42:09 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:43:04 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:43:11 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:43:19 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:43:25 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:06 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:46:15 [vite] (ssr) page reload src/routes/docs/[...slug]/+page.server.ts
+15:46:23 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:30 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:36 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:46:45 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:46:51 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:51 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:46:57 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:11 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:23 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:41 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:47:47 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:47:53 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:48:00 [vite] (ssr) page reload src/lib/components/docs/Sidebar.svelte
+15:48:06 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte
+15:50:55 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:51:19 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:51:28 [vite] (ssr) page reload src/lib/components/docs/TableOfContents.svelte
+15:58:07 [vite] (ssr) page reload src/lib/components/docs/DocumentationLayout.svelte

@@ -1,0 +1,59 @@
+import { betterAuth } from "better-auth";
+import { env } from '$env/dynamic/private';
+import { PUBLIC_SITE_URL } from '$env/static/public';
+
+export const auth = betterAuth({
+  secret: env.AUTH_SECRET || "vibby-ai-dev-secret-key-2025-very-long-random-string-for-better-security",
+  baseURL: PUBLIC_SITE_URL || "http://localhost:5173",
+  
+  // 暂时使用 SQLite 数据库，避免复杂的连接问题
+  database: {
+    provider: "sqlite",
+    url: "file:./better-auth.db",
+  },
+  
+  emailAndPassword: {
+    enabled: true,
+    requireEmailVerification: false, // 开发阶段先关闭邮箱验证
+  },
+  
+  // GitHub OAuth 将在后续添加
+  socialProviders: {},
+  
+  session: {
+    expiresIn: 60 * 60 * 24 * 7, // 7天
+    updateAge: 60 * 60 * 24, // 1天更新一次
+  },
+  
+  user: {
+    additionalFields: {
+      subscription_status: {
+        type: "string",
+        defaultValue: "free",
+      },
+      subscription_id: {
+        type: "string",
+        required: false,
+      },
+      customer_id: {
+        type: "string", 
+        required: false,
+      },
+    },
+  },
+  
+  advanced: {
+    generateId: false, // 使用数据库的 UUID
+    crossSubDomainCookies: {
+      enabled: true,
+      domain: ".localhost", // 开发环境
+    },
+  },
+  
+  logger: {
+    level: "info",
+  },
+});
+
+export type Session = typeof auth.$Infer.Session;
+export type User = typeof auth.$Infer.Session.user;

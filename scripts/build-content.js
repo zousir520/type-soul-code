@@ -1,0 +1,225 @@
+#!/usr/bin/env node
+
+import { readdir, readFile, writeFile, mkdir } from 'fs/promises';
+import { join, dirname, extname, basename } from 'path';
+import { fileURLToPath } from 'url';
+import matter from 'gray-matter';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const ROOT_DIR = join(__dirname, '..');
+const CONTENT_DIR = join(ROOT_DIR, 'src/content');
+const OUTPUT_DIR = join(ROOT_DIR, 'src/lib/generated');
+
+/**
+ * 递归读取目录中的所有文件
+ */
+async function getAllFiles(dir, files = []) {
+	const dirFiles = await readdir(dir, { withFileTypes: true });
+	
+	for (const file of dirFiles) {
+		const fullPath = join(dir, file.name);
+		if (file.isDirectory()) {
+			await getAllFiles(fullPath, files);
+		} else {
+			files.push(fullPath);
+		}
+	}
+	
+	return files;
+}
+
+/**
+ * 处理 JSON 文件
+ */
+async function processJsonFile(filePath) {
+	const content = await readFile(filePath, 'utf-8');
+	return JSON.parse(content);
+}
+
+/**
+ * 处理 Markdown 文件
+ */
+async function processMarkdownFile(filePath) {
+	const content = await readFile(filePath, 'utf-8');
+	const { data, content: markdownContent } = matter(content);
+	
+	return {
+		frontmatter: data,
+		content: markdownContent,
+		slug: basename(filePath, '.md')
+	};
+}
+
+/**
+ * 获取相对于 content 目录的路径
+ */
+function getRelativePath(filePath) {
+	return filePath.replace(CONTENT_DIR, '').replace(/^\//, '');
+}
+
+/**
+ * 将路径转换为有效的 JavaScript 标识符
+ */
+function pathToIdentifier(path) {
+	return path
+		.replace(/[\/\-\.]/g, '_')
+		.replace(/[^a-zA-Z0-9_]/g, '')
+		.replace(/^(\d)/, '_$1');
+}
+
+/**
+ * 主构建函数
+ */
+async function buildContent() {
+	console.log('🔄 开始构建内容...');
+	
+	// 确保输出目录存在
+	await mkdir(OUTPUT_DIR, { recursive: true });
+	
+	// 获取所有内容文件
+	const allFiles = await getAllFiles(CONTENT_DIR);
+	
+	const contentMap = {};
+	const exports = [];
+	
+	for (const filePath of allFiles) {
+		const relativePath = getRelativePath(filePath);
+		const ext = extname(filePath);
+		const identifier = pathToIdentifier(relativePath);
+		
+		console.log(`📄 处理文件: ${relativePath}`);
+		
+		try {
+			let data;
+			
+			if (ext === '.json') {
+				data = await processJsonFile(filePath);
+			} else if (ext === '.md') {
+				data = await processMarkdownFile(filePath);
+			} else {
+				// 其他文件类型，读取为文本
+				data = await readFile(filePath, 'utf-8');
+			}
+			
+			contentMap[relativePath] = data;
+			exports.push(`export const ${identifier} = ${JSON.stringify(data, null, 2)};`);
+			
+		} catch (error) {
+			console.error(`❌ 处理文件失败 ${relativePath}:`, error.message);
+		}
+	}
+	
+	// 生成内容映射
+	const contentMapExport = `export const CONTENT_MAP = ${JSON.stringify(contentMap, null, 2)};`;
+	
+	// 生成类型定义
+	const typeDefinitions = `
+export interface ContentItem {
+	[key: string]: any;
+}
+
+export interface BlogPost {
+	frontmatter: {
+		title: string;
+		description?: string;
+		date?: string;
+		tags?: string[];
+		[key: string]: any;
+	};
+	content: string;
+	slug: string;
+}
+
+export interface ContentMap {
+	[path: string]: ContentItem | BlogPost | string;
+}
+`;
+
+	// 生成获取内容的辅助函数
+	const helperFunctions = `
+/**
+ * 获取内容项
+ */
+export function getContent(path: string): ContentItem | null {
+	return CONTENT_MAP[path] || null;
+}
+
+/**
+ * 获取所有博客文章
+ */
+export function getAllBlogPosts(locale = 'en'): BlogPost[] {
+	const posts: BlogPost[] = [];
+	
+	for (const [path, content] of Object.entries(CONTENT_MAP)) {
+		if (path.startsWith('blog/') && path.endsWith('.md')) {
+			const post = content as BlogPost;
+			if (!locale || path.includes(\`.\${locale}.md\`) || (!path.includes('.zh.md') && locale === 'en')) {
+				posts.push(post);
+			}
+		}
+	}
+	
+	return posts.sort((a, b) => {
+		const dateA = new Date(a.frontmatter.date || 0);
+		const dateB = new Date(b.frontmatter.date || 0);
+		return dateB.getTime() - dateA.getTime();
+	});
+}
+
+/**
+ * 通过 slug 获取博客文章
+ */
+export function getBlogPostBySlug(slug: string, locale = 'en'): BlogPost | null {
+	const posts = getAllBlogPosts(locale);
+	return posts.find(post => post.slug === slug || post.slug === \`\${slug}.\${locale}\`) || null;
+}
+
+/**
+ * 获取页面内容
+ */
+export function getPageContent(slug: string, locale = 'en'): any | null {
+	const localizedPath = \`pages/\${slug}.\${locale}.md\`;
+	const defaultPath = \`pages/\${slug}.md\`;
+	
+	return getContent(localizedPath) || getContent(defaultPath);
+}
+
+/**
+ * 获取设置内容
+ */
+export function getSettings(type: string): any | null {
+	return getContent(\`settings/\${type}.json\`);
+}
+
+/**
+ * 获取主页内容
+ */
+export function getHomeContent(section: string): any | null {
+	return getContent(\`home/\${section}.json\`);
+}
+`;
+
+	// 生成完整的输出文件
+	const output = [
+		'// 自动生成的文件，请勿手动编辑',
+		'// Generated by scripts/build-content.js',
+		'',
+		typeDefinitions,
+		contentMapExport,
+		'',
+		...exports,
+		'',
+		helperFunctions
+	].join('\n');
+	
+	// 写入文件
+	const outputPath = join(OUTPUT_DIR, 'content.ts');
+	await writeFile(outputPath, output, 'utf-8');
+	
+	console.log(`✅ 内容构建完成！生成了 ${Object.keys(contentMap).length} 个内容项`);
+	console.log(`📁 输出文件: ${outputPath}`);
+}
+
+// 运行构建
+buildContent().catch(console.error);

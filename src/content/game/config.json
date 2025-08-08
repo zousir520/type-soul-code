@@ -1,0 +1,229 @@
+{
+  "title": "Tennis Zero",
+  "description": "Experience the ultimate tennis action in Tennis Zero, a popular Roblox game with intense 2v2 matches, anime-inspired styles, and competitive ranked play. Master powerful rackets, flows, and playstyles in this strategic tennis simulation.",
+  "keyword": "Tennis Zero",
+  "hero": {
+    "type": "iframe",
+    "iframeUrl": "https://www.roblox.com/games/tennis-zero",
+    "title": "🎾 Play Tennis Zero Now!",
+    "subtitle": "Experience intense 2v2 tennis action with anime-inspired elements",
+    "backgroundImage": "/game-bg.jpg",
+    "ctaText": "Start Playing Tennis Zero on Roblox"
+  },
+  "about": {
+    "title": "About Tennis Zero",
+    "description": "Tennis Zero is one of the best tennis experiences on Roblox, developed by Chrollo. This anime-inspired tennis game combines intense sports simulation with strategic depth, featuring customizable styles, flows, and competitive gameplay that rivals high-energy anime like Blue Lock.",
+    "features": [
+      {
+        "title": "🎾 Intense 2v2 Tennis Action",
+        "description": "Engage in fast-paced tennis matches with strategic gameplay and team coordination",
+        "icon": "play"
+      },
+      {
+        "title": "⚡ Anime-Inspired Styles & Flows",
+        "description": "Unlock and customize powerful playstyles with unique animations and abilities",
+        "icon": "refresh"
+      },
+      {
+        "title": "💰 Progressive Upgrade System",
+        "description": "Use Yen and spins to unlock powerful rackets, balls, and legendary styles",
+        "icon": "users"
+      },
+      {
+        "title": "🏆 Competitive Ranked Play",
+        "description": "Climb the rankings in competitive matches or enjoy casual gameplay",
+        "icon": "map"
+      }
+    ]
+  },
+  "relatedGames": [
+    {
+      "id": "blox-fruits",
+      "title": "Blox Fruits",
+      "description": "Popular Roblox adventure game with devil fruits and combat",
+      "thumbnail": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=300&fit=crop",
+      "url": "https://www.roblox.com/games/blox-fruits",
+      "category": "Adventure"
+    },
+    {
+      "id": "arsenal",
+      "title": "Arsenal",
+      "description": "Fast-paced FPS game on Roblox with weapon progression",
+      "thumbnail": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
+      "url": "https://www.roblox.com/games/arsenal",
+      "category": "Shooter"
+    },
+    {
+      "id": "anime-fighting-simulator",
+      "title": "Anime Fighting Simulator",
+      "description": "Train your anime character and become the strongest fighter",
+      "thumbnail": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+      "url": "https://www.roblox.com/games/anime-fighting-simulator",
+      "category": "Fighting"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Active Players",
+      "value": "100K+",
+      "icon": "👥"
+    },
+    {
+      "label": "Matches Played",
+      "value": "5M+",
+      "icon": "🎾"
+    },
+    {
+      "label": "Styles Available",
+      "value": "50+",
+      "icon": "⚡"
+    },
+    {
+      "label": "Community Rating",
+      "value": "4.8★",
+      "icon": "⭐"
+    }
+  ],
+  "social": {
+    "discord": "https://discord.gg/tenniszero",
+    "twitter": "https://twitter.com/tenniszero",
+    "youtube": "https://youtube.com/@tenniszero",
+    "roblox": "https://www.roblox.com/groups/current-blackstar"
+  },
+  "whatIs": {
+    "title": "What is Tennis Zero?",
+    "content": "Tennis Zero is a revolutionary tennis game on Roblox that combines intense sports simulation with anime-inspired elements. Developed by Chrollo, this Tennis Zero experience features strategic 2v2 gameplay, customizable styles and flows, and a progression system that keeps players engaged for hours.",
+    "highlights": [
+      {
+        "number": "2v2",
+        "label": "Intense Tennis Matches in Tennis Zero"
+      },
+      {
+        "number": "50+",
+        "label": "Unique Styles & Flows in Tennis Zero"
+      },
+      {
+        "number": "∞",
+        "label": "Strategic Combinations in Tennis Zero"
+      }
+    ]
+  },
+  "features": {
+    "title": "Features of Tennis Zero",
+    "subtitle": "Discover what makes Tennis Zero the ultimate tennis experience on Roblox",
+    "items": [
+      {
+        "title": "Strategic Tennis Zero Gameplay",
+        "description": "Master the art of tennis with deep strategic gameplay that rewards skill and teamwork in every Tennis Zero match",
+        "icon": "🎾"
+      },
+      {
+        "title": "Customizable Tennis Zero Styles",
+        "description": "Unlock powerful styles and flows inspired by anime, each with unique abilities and visual effects in Tennis Zero",
+        "icon": "⚡"
+      },
+      {
+        "title": "Progressive Tennis Zero System",
+        "description": "Earn Yen and use spins to unlock legendary rackets, balls, and mythic styles like Luffy-inspired playstyles",
+        "icon": "💰"
+      },
+      {
+        "title": "Competitive Tennis Zero Ranking",
+        "description": "Climb the competitive ladder or enjoy casual matches with friends in Tennis Zero's flexible game modes",
+        "icon": "🏆"
+      }
+    ]
+  },
+  "codes": {
+    "title": "Active Tennis Zero Codes (July 2025)",
+    "subtitle": "Get free Yen, Lucky Style Spins, and Lucky Flow Spins",
+    "items": [
+      {
+        "code": "100KLIKES",
+        "rewards": "5 Lucky Style Spins + 5 Lucky Flow Spins",
+        "status": "active"
+      },
+      {
+        "code": "50KLIKES",
+        "rewards": "3 Lucky Style Spins + 3 Lucky Flow Spins",
+        "status": "active"
+      },
+      {
+        "code": "RELEASE",
+        "rewards": "1,000 Yen + 3 Lucky Style Spins + 3 Lucky Flow Spins",
+        "status": "active"
+      }
+    ]
+  },
+  "howToUse": {
+    "title": "How to Play Tennis Zero",
+    "subtitle": "Master Tennis Zero in 4 simple steps",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Join Tennis Zero on Roblox",
+        "description": "Launch Tennis Zero from Roblox and join the Current x Blackstar group for code access"
+      },
+      {
+        "step": "02",
+        "title": "Redeem Tennis Zero Codes",
+        "description": "Click the 'Codes' button in the lobby and redeem active codes for free Yen and spins"
+      },
+      {
+        "step": "03",
+        "title": "Customize Your Tennis Zero Style",
+        "description": "Use Lucky Style Spins to unlock powerful styles and flows, focusing on Mythic rarities"
+      },
+      {
+        "step": "04",
+        "title": "Master Tennis Zero Matches",
+        "description": "Practice in casual matches or compete in ranked play to climb the Tennis Zero leaderboards"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions About Tennis Zero",
+    "items": [
+      {
+        "question": "What is Tennis Zero and how does it work?",
+        "answer": "Tennis Zero is a popular Roblox tennis game developed by Chrollo that features intense 2v2 matches with anime-inspired elements. Players can customize their playstyles, unlock powerful abilities, and compete in ranked or casual matches."
+      },
+      {
+        "question": "Is Tennis Zero free to play on Roblox?",
+        "answer": "Yes! Tennis Zero is completely free to play on Roblox. You can earn in-game currency (Yen) through gameplay and use codes to get free spins and rewards."
+      },
+      {
+        "question": "How do I redeem Tennis Zero codes?",
+        "answer": "Join the Current x Blackstar Roblox group, launch Tennis Zero, click the 'Codes' button in the lobby, enter your code, and hit 'Redeem' to claim your rewards."
+      },
+      {
+        "question": "What are the best styles in Tennis Zero?",
+        "answer": "Focus on spinning for Mythic rarity styles like Luffy-inspired playstyles. These provide the most powerful abilities and can dominate matches when mastered properly."
+      },
+      {
+        "question": "Can I play Tennis Zero solo or do I need a team?",
+        "answer": "Tennis Zero features 2v2 gameplay, so you'll need a partner. You can queue with friends or be matched with random players in both casual and ranked modes."
+      },
+      {
+        "question": "How do I earn Yen in Tennis Zero?",
+        "answer": "You can earn Yen by playing matches, completing objectives, and redeeming active codes. Yen is used to purchase upgrades and unlock new content in Tennis Zero."
+      },
+      {
+        "question": "Are Tennis Zero codes permanent?",
+        "answer": "No, Tennis Zero codes can expire without notice. It's recommended to redeem active codes as soon as possible to ensure you don't miss out on free rewards."
+      },
+      {
+        "question": "What makes Tennis Zero different from other Roblox sports games?",
+        "answer": "Tennis Zero combines traditional tennis mechanics with anime-inspired elements, strategic depth, and a robust progression system. It's described as one of the best tennis experiences on Roblox."
+      },
+      {
+        "question": "Can I customize my character in Tennis Zero?",
+        "answer": "Yes! Tennis Zero offers extensive customization through styles, flows, rackets, and balls. Each element affects both your appearance and gameplay abilities."
+      },
+      {
+        "question": "Is Tennis Zero suitable for competitive play?",
+        "answer": "Absolutely! Tennis Zero features a ranked system for competitive players while also offering casual modes for those who prefer relaxed gameplay."
+      }
+    ]
+  }
+}
