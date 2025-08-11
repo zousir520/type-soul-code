@@ -344,7 +344,7 @@ export default function Home() {
              <div className="text-sm text-escapist-text-secondary space-y-1">
                <p>📧 Email: 2569861854@qq.com</p>
                <p>🐦 Twitter: @zou_yuxian30976</p>
-               <p>🌐 Website: zousir520.github.io/type-soul</p>
+               <p>🌐 Website: zousir520.github.io/type-soul-code</p>
              </div>
            </div>
          </div>
